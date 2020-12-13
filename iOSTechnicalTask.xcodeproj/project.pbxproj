@@ -14,7 +14,6 @@
 		DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EEF258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld */; };
 		DEAD1EF325827A0000C851D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAD1EF225827A0000C851D6 /* Assets.xcassets */; };
 		DEAD1EF625827A0000C851D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAD1EF425827A0000C851D6 /* LaunchScreen.storyboard */; };
-		DEAD1F0125827A0000C851D6 /* iOSTechnicalTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1F0025827A0000C851D6 /* iOSTechnicalTaskTests.swift */; };
 		DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366812585F26E00AF5BCD /* TransactionListViewController.swift */; };
 		DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366852585F29400AF5BCD /* TransactionListViewModel.swift */; };
 		DEE3668D2585F62100AF5BCD /* TransactionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */; };
@@ -23,6 +22,10 @@
 		DEE366D325860AB100AF5BCD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366D225860AB100AF5BCD /* NetworkService.swift */; };
 		DEE366E6258613AB00AF5BCD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366E5258613AB00AF5BCD /* NetworkError.swift */; };
 		DEE366EB258615AD00AF5BCD /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366EA258615AD00AF5BCD /* Transaction.swift */; };
+		DEE366FA25861A6800AF5BCD /* GetTransactionListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */; };
+		DEE366FE25861A9C00AF5BCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366FD25861A9C00AF5BCD /* Constants.swift */; };
+		DEE3670225861B5800AF5BCD /* MappableNetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3670125861B5800AF5BCD /* MappableNetworkApi.swift */; };
+		DEE3670725861DFD00AF5BCD /* GetTransactionListApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3670625861DFD00AF5BCD /* GetTransactionListApiTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,6 @@
 		DEAD1EF525827A0000C851D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEAD1EF725827A0000C851D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEAD1EFC25827A0000C851D6 /* iOSTechnicalTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTechnicalTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEAD1F0025827A0000C851D6 /* iOSTechnicalTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTechnicalTaskTests.swift; sourceTree = "<group>"; };
 		DEAD1F0225827A0000C851D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEE366812585F26E00AF5BCD /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		DEE366852585F29400AF5BCD /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
@@ -59,6 +61,10 @@
 		DEE366D225860AB100AF5BCD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DEE366E5258613AB00AF5BCD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DEE366EA258615AD00AF5BCD /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListApi.swift; sourceTree = "<group>"; };
+		DEE366FD25861A9C00AF5BCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DEE3670125861B5800AF5BCD /* MappableNetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableNetworkApi.swift; sourceTree = "<group>"; };
+		DEE3670625861DFD00AF5BCD /* GetTransactionListApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListApiTest.swift; sourceTree = "<group>"; };
 		F8F31C8BC076EAF93734F422 /* Pods-iOSTechnicalTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,7 +151,7 @@
 		DEAD1EFF25827A0000C851D6 /* iOSTechnicalTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEAD1F0025827A0000C851D6 /* iOSTechnicalTaskTests.swift */,
+				DEE3670525861DC200AF5BCD /* NetworkApiTest */,
 				DEAD1F0225827A0000C851D6 /* Info.plist */,
 			);
 			path = iOSTechnicalTaskTests;
@@ -165,7 +171,9 @@
 		DEE366892585F2DF00AF5BCD /* network */ = {
 			isa = PBXGroup;
 			children = (
+				DEE366F025861A3E00AF5BCD /* api */,
 				DEE366D225860AB100AF5BCD /* NetworkService.swift */,
+				DEE3670125861B5800AF5BCD /* MappableNetworkApi.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 		DEE366E32586135400AF5BCD /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				DEE366FD25861A9C00AF5BCD /* Constants.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -200,6 +209,22 @@
 				DEE366EA258615AD00AF5BCD /* Transaction.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		DEE366F025861A3E00AF5BCD /* api */ = {
+			isa = PBXGroup;
+			children = (
+				DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		DEE3670525861DC200AF5BCD /* NetworkApiTest */ = {
+			isa = PBXGroup;
+			children = (
+				DEE3670625861DFD00AF5BCD /* GetTransactionListApiTest.swift */,
+			);
+			path = NetworkApiTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,10 +396,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */,
+				DEE366FE25861A9C00AF5BCD /* Constants.swift in Sources */,
 				DEE366E6258613AB00AF5BCD /* NetworkError.swift in Sources */,
 				DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */,
 				DEE366BD2585FDB000AF5BCD /* TransactionTableVIewCell.swift in Sources */,
+				DEE3670225861B5800AF5BCD /* MappableNetworkApi.swift in Sources */,
 				DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */,
+				DEE366FA25861A6800AF5BCD /* GetTransactionListApi.swift in Sources */,
 				DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */,
 				DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */,
 				DEE366D325860AB100AF5BCD /* NetworkService.swift in Sources */,
@@ -386,7 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEAD1F0125827A0000C851D6 /* iOSTechnicalTaskTests.swift in Sources */,
+				DEE3670725861DFD00AF5BCD /* GetTransactionListApiTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

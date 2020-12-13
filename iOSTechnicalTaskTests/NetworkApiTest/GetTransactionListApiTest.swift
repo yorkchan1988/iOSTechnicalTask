@@ -1,14 +1,13 @@
 //
-//  iOSTechnicalTaskTests.swift
+//  GetTransactionListApiTest.swift
 //  iOSTechnicalTaskTests
 //
-//  Created by YORK CHAN on 10/12/2020.
+//  Created by YORK CHAN on 13/12/2020.
 //
 
 import XCTest
-@testable import iOSTechnicalTask
 
-class iOSTechnicalTaskTests: XCTestCase {
+class GetTransactionListApiTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
