@@ -11,12 +11,13 @@
 		714CD52509AEED0A0D03D917 /* Pods_iOSTechnicalTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37FFF0A0E0629B29EC42B9F /* Pods_iOSTechnicalTask.framework */; };
 		DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */; };
 		DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */; };
-		DEAD1EEB258279FF00C851D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EEA258279FF00C851D6 /* ViewController.swift */; };
-		DEAD1EEE258279FF00C851D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAD1EEC258279FF00C851D6 /* Main.storyboard */; };
 		DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EEF258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld */; };
 		DEAD1EF325827A0000C851D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAD1EF225827A0000C851D6 /* Assets.xcassets */; };
 		DEAD1EF625827A0000C851D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAD1EF425827A0000C851D6 /* LaunchScreen.storyboard */; };
 		DEAD1F0125827A0000C851D6 /* iOSTechnicalTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1F0025827A0000C851D6 /* iOSTechnicalTaskTests.swift */; };
+		DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366812585F26E00AF5BCD /* TransactionListViewController.swift */; };
+		DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366852585F29400AF5BCD /* TransactionListViewModel.swift */; };
+		DEE3668D2585F62100AF5BCD /* TransactionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,6 @@
 		DEAD1EE3258279FF00C851D6 /* iOSTechnicalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTechnicalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEAD1EEA258279FF00C851D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DEAD1EED258279FF00C851D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEAD1EF0258279FF00C851D6 /* iOSTechnicalTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSTechnicalTask.xcdatamodel; sourceTree = "<group>"; };
 		DEAD1EF225827A0000C851D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEAD1EF525827A0000C851D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,9 @@
 		DEAD1EFC25827A0000C851D6 /* iOSTechnicalTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTechnicalTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD1F0025827A0000C851D6 /* iOSTechnicalTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTechnicalTaskTests.swift; sourceTree = "<group>"; };
 		DEAD1F0225827A0000C851D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE366812585F26E00AF5BCD /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		DEE366852585F29400AF5BCD /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListViewController.xib; sourceTree = "<group>"; };
 		F8F31C8BC076EAF93734F422 /* Pods-iOSTechnicalTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,10 +117,10 @@
 		DEAD1EE5258279FF00C851D6 /* iOSTechnicalTask */ = {
 			isa = PBXGroup;
 			children = (
+				DEE366892585F2DF00AF5BCD /* network */,
+				DEE3667E2585F24300AF5BCD /* ui */,
 				DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */,
 				DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */,
-				DEAD1EEA258279FF00C851D6 /* ViewController.swift */,
-				DEAD1EEC258279FF00C851D6 /* Main.storyboard */,
 				DEAD1EF225827A0000C851D6 /* Assets.xcassets */,
 				DEAD1EF425827A0000C851D6 /* LaunchScreen.storyboard */,
 				DEAD1EF725827A0000C851D6 /* Info.plist */,
@@ -134,6 +136,23 @@
 				DEAD1F0225827A0000C851D6 /* Info.plist */,
 			);
 			path = iOSTechnicalTaskTests;
+			sourceTree = "<group>";
+		};
+		DEE3667E2585F24300AF5BCD /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				DEE366812585F26E00AF5BCD /* TransactionListViewController.swift */,
+				DEE366852585F29400AF5BCD /* TransactionListViewModel.swift */,
+				DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		DEE366892585F2DF00AF5BCD /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAD1EF625827A0000C851D6 /* LaunchScreen.storyboard in Resources */,
+				DEE3668D2585F62100AF5BCD /* TransactionListViewController.xib in Resources */,
 				DEAD1EF325827A0000C851D6 /* Assets.xcassets in Resources */,
-				DEAD1EEE258279FF00C851D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEAD1EEB258279FF00C851D6 /* ViewController.swift in Sources */,
 				DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */,
+				DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */,
 				DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */,
 				DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */,
+				DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,14 +349,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DEAD1EEC258279FF00C851D6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEAD1EED258279FF00C851D6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DEAD1EF425827A0000C851D6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
