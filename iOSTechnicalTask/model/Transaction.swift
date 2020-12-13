@@ -13,7 +13,7 @@ struct Transaction: Mappable {
     var date : String?
     var description : String?
     var category : String?
-    var currency : Int?
+    var currency : String?
     var amount : Double?
     var currencyIso: String?
     var productId : UInt32?

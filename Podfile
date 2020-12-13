@@ -16,6 +16,8 @@ target 'iOSTechnicalTask' do
   target 'iOSTechnicalTaskTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxTest', '~> 5.1.1'
+    pod 'RxBlocking', '~> 5.1.1'
     pod 'OHHTTPStubs/Swift', '~> 9.1.0'
   end
 
