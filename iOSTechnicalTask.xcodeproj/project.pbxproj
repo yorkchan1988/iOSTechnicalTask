@@ -18,6 +18,8 @@
 		DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366812585F26E00AF5BCD /* TransactionListViewController.swift */; };
 		DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366852585F29400AF5BCD /* TransactionListViewModel.swift */; };
 		DEE3668D2585F62100AF5BCD /* TransactionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */; };
+		DEE366BD2585FDB000AF5BCD /* TransactionTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366BC2585FDB000AF5BCD /* TransactionTableVIewCell.swift */; };
+		DEE366C12585FDD300AF5BCD /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE366C02585FDD300AF5BCD /* TransactionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		DEE366812585F26E00AF5BCD /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		DEE366852585F29400AF5BCD /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListViewController.xib; sourceTree = "<group>"; };
+		DEE366BC2585FDB000AF5BCD /* TransactionTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableVIewCell.swift; sourceTree = "<group>"; };
+		DEE366C02585FDD300AF5BCD /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		F8F31C8BC076EAF93734F422 /* Pods-iOSTechnicalTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +145,7 @@
 		DEE3667E2585F24300AF5BCD /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				DEE366BB2585FD8A00AF5BCD /* TransactionListTableViewCell */,
 				DEE366812585F26E00AF5BCD /* TransactionListViewController.swift */,
 				DEE366852585F29400AF5BCD /* TransactionListViewModel.swift */,
 				DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */,
@@ -153,6 +158,15 @@
 			children = (
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		DEE366BB2585FD8A00AF5BCD /* TransactionListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEE366BC2585FDB000AF5BCD /* TransactionTableVIewCell.swift */,
+				DEE366C02585FDD300AF5BCD /* TransactionTableViewCell.xib */,
+			);
+			path = TransactionListTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE366C12585FDD300AF5BCD /* TransactionTableViewCell.xib in Resources */,
 				DEAD1EF625827A0000C851D6 /* LaunchScreen.storyboard in Resources */,
 				DEE3668D2585F62100AF5BCD /* TransactionListViewController.xib in Resources */,
 				DEAD1EF325827A0000C851D6 /* Assets.xcassets in Resources */,
@@ -324,6 +339,7 @@
 			files = (
 				DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */,
 				DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */,
+				DEE366BD2585FDB000AF5BCD /* TransactionTableVIewCell.swift in Sources */,
 				DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */,
 				DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */,
 				DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */,
