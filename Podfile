@@ -11,6 +11,7 @@ target 'iOSTechnicalTask' do
   pod 'RxSwift', '~> 5.1.1'
   pod 'RxCocoa', '~> 5.1.1'
   pod 'RxDataSources', '~> 4.0.1'
+  pod 'ObjectMapper', '~> 4.2.0'
 
   target 'iOSTechnicalTaskTests' do
     inherit! :search_paths

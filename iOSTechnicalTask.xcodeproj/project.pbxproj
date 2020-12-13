@@ -20,6 +20,9 @@
 		DEE3668D2585F62100AF5BCD /* TransactionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */; };
 		DEE366BD2585FDB000AF5BCD /* TransactionTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366BC2585FDB000AF5BCD /* TransactionTableVIewCell.swift */; };
 		DEE366C12585FDD300AF5BCD /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE366C02585FDD300AF5BCD /* TransactionTableViewCell.xib */; };
+		DEE366D325860AB100AF5BCD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366D225860AB100AF5BCD /* NetworkService.swift */; };
+		DEE366E6258613AB00AF5BCD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366E5258613AB00AF5BCD /* NetworkError.swift */; };
+		DEE366EB258615AD00AF5BCD /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366EA258615AD00AF5BCD /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		DEE3668C2585F62100AF5BCD /* TransactionListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListViewController.xib; sourceTree = "<group>"; };
 		DEE366BC2585FDB000AF5BCD /* TransactionTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableVIewCell.swift; sourceTree = "<group>"; };
 		DEE366C02585FDD300AF5BCD /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		DEE366D225860AB100AF5BCD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DEE366E5258613AB00AF5BCD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DEE366EA258615AD00AF5BCD /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		F8F31C8BC076EAF93734F422 /* Pods-iOSTechnicalTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +127,9 @@
 		DEAD1EE5258279FF00C851D6 /* iOSTechnicalTask */ = {
 			isa = PBXGroup;
 			children = (
+				DEE366E92586158000AF5BCD /* model */,
+				DEE366E42586139D00AF5BCD /* error */,
+				DEE366E32586135400AF5BCD /* utils */,
 				DEE366892585F2DF00AF5BCD /* network */,
 				DEE3667E2585F24300AF5BCD /* ui */,
 				DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */,
@@ -156,6 +165,7 @@
 		DEE366892585F2DF00AF5BCD /* network */ = {
 			isa = PBXGroup;
 			children = (
+				DEE366D225860AB100AF5BCD /* NetworkService.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -167,6 +177,29 @@
 				DEE366C02585FDD300AF5BCD /* TransactionTableViewCell.xib */,
 			);
 			path = TransactionListTableViewCell;
+			sourceTree = "<group>";
+		};
+		DEE366E32586135400AF5BCD /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		DEE366E42586139D00AF5BCD /* error */ = {
+			isa = PBXGroup;
+			children = (
+				DEE366E5258613AB00AF5BCD /* NetworkError.swift */,
+			);
+			path = error;
+			sourceTree = "<group>";
+		};
+		DEE366E92586158000AF5BCD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DEE366EA258615AD00AF5BCD /* Transaction.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,11 +371,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */,
+				DEE366E6258613AB00AF5BCD /* NetworkError.swift in Sources */,
 				DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */,
 				DEE366BD2585FDB000AF5BCD /* TransactionTableVIewCell.swift in Sources */,
 				DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */,
 				DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */,
 				DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */,
+				DEE366D325860AB100AF5BCD /* NetworkService.swift in Sources */,
+				DEE366EB258615AD00AF5BCD /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
