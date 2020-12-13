@@ -7,8 +7,6 @@
 
 import Foundation
 
-let FAIL_TO_PARSE_ERROR_RESONSE = "Fail to parse api error."
-
 enum NetworkError {
     case serverError(String, String)
     case parsingError(String)
@@ -20,7 +18,7 @@ extension NetworkError : LocalizedError {
         case .serverError(let apiPath, let message):
             return apiPath + "-" + message
         case .parsingError(let apiPath):
-            return apiPath + " - " + FAIL_TO_PARSE_ERROR_RESONSE
+            return apiPath + " - " + ERROR_MESSAGE_PARSING_ERROR
         }
     }
 }
