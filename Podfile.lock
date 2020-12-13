@@ -5,6 +5,19 @@ PODS:
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
   - ObjectMapper (4.2.0)
+  - OHHTTPStubs/Core (9.1.0)
+  - OHHTTPStubs/Default (9.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.1.0)
+  - OHHTTPStubs/Swift (9.1.0):
+    - OHHTTPStubs/Default
   - RxAlamofire (5.7.1):
     - RxAlamofire/Core (= 5.7.1)
   - RxAlamofire/Core (5.7.1):
@@ -24,6 +37,7 @@ PODS:
 DEPENDENCIES:
   - Kingfisher (~> 5.15.8)
   - ObjectMapper (~> 4.2.0)
+  - OHHTTPStubs/Swift (~> 9.1.0)
   - RxAlamofire (~> 5.7.1)
   - RxCocoa (~> 5.1.1)
   - RxDataSources (~> 4.0.1)
@@ -35,6 +49,7 @@ SPEC REPOS:
     - Differentiator
     - Kingfisher
     - ObjectMapper
+    - OHHTTPStubs
     - RxAlamofire
     - RxCocoa
     - RxDataSources
@@ -46,12 +61,13 @@ SPEC CHECKSUMS:
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
   RxAlamofire: 8e144c62dcc01d68dcb366bfc542eb6dd46bab78
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
 
-PODFILE CHECKSUM: 6271b5a5fe31e8378d353f3927a8d188530829a9
+PODFILE CHECKSUM: c3c5ea994576fcae8ee031b8e09912632441d4eb
 
 COCOAPODS: 1.9.3

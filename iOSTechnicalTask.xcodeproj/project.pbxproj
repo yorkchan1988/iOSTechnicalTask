@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		52CCBCCDEDC6BF9CB57D89D3 /* Pods_iOSTechnicalTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */; };
 		714CD52509AEED0A0D03D917 /* Pods_iOSTechnicalTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37FFF0A0E0629B29EC42B9F /* Pods_iOSTechnicalTask.framework */; };
+		DE32F70F258624B8008FA04D /* GetTransactionListApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F70E258624B8008FA04D /* GetTransactionListApiTest.swift */; };
 		DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */; };
 		DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */; };
 		DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EEF258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld */; };
@@ -25,7 +26,6 @@
 		DEE366FA25861A6800AF5BCD /* GetTransactionListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */; };
 		DEE366FE25861A9C00AF5BCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366FD25861A9C00AF5BCD /* Constants.swift */; };
 		DEE3670225861B5800AF5BCD /* MappableNetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3670125861B5800AF5BCD /* MappableNetworkApi.swift */; };
-		DEE3670725861DFD00AF5BCD /* GetTransactionListApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE3670625861DFD00AF5BCD /* GetTransactionListApiTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,7 @@
 		B37FFF0A0E0629B29EC42B9F /* Pods_iOSTechnicalTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B903B03ED2B76302DA6461C2 /* Pods_iOSTechnicalTask_iOSTechnicalTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTask_iOSTechnicalTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87418E0DB64119148E98022 /* Pods-iOSTechnicalTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTask.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTask/Pods-iOSTechnicalTask.debug.xcconfig"; sourceTree = "<group>"; };
+		DE32F70E258624B8008FA04D /* GetTransactionListApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListApiTest.swift; sourceTree = "<group>"; };
 		DEAD1EE3258279FF00C851D6 /* iOSTechnicalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTechnicalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListApi.swift; sourceTree = "<group>"; };
 		DEE366FD25861A9C00AF5BCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE3670125861B5800AF5BCD /* MappableNetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableNetworkApi.swift; sourceTree = "<group>"; };
-		DEE3670625861DFD00AF5BCD /* GetTransactionListApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListApiTest.swift; sourceTree = "<group>"; };
 		F8F31C8BC076EAF93734F422 /* Pods-iOSTechnicalTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +110,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE32F70D2586249A008FA04D /* networkApiTest */ = {
+			isa = PBXGroup;
+			children = (
+				DE32F70E258624B8008FA04D /* GetTransactionListApiTest.swift */,
+			);
+			path = networkApiTest;
+			sourceTree = "<group>";
+		};
 		DEAD1EDA258279FE00C851D6 = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +159,7 @@
 		DEAD1EFF25827A0000C851D6 /* iOSTechnicalTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEE3670525861DC200AF5BCD /* NetworkApiTest */,
+				DE32F70D2586249A008FA04D /* networkApiTest */,
 				DEAD1F0225827A0000C851D6 /* Info.plist */,
 			);
 			path = iOSTechnicalTaskTests;
@@ -219,14 +227,6 @@
 			path = api;
 			sourceTree = "<group>";
 		};
-		DEE3670525861DC200AF5BCD /* NetworkApiTest */ = {
-			isa = PBXGroup;
-			children = (
-				DEE3670625861DFD00AF5BCD /* GetTransactionListApiTest.swift */,
-			);
-			path = NetworkApiTest;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,6 +257,7 @@
 				DEAD1EF825827A0000C851D6 /* Sources */,
 				DEAD1EF925827A0000C851D6 /* Frameworks */,
 				DEAD1EFA25827A0000C851D6 /* Resources */,
+				74036AC682D7577C56133E1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +283,7 @@
 					};
 					DEAD1EFB25827A0000C851D6 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 						TestTargetID = DEAD1EE2258279FF00C851D6;
 					};
 				};
@@ -327,6 +329,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		74036AC682D7577C56133E1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8FCA36EFC71E3252C71AFA60 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -414,7 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEE3670725861DFD00AF5BCD /* GetTransactionListApiTest.swift in Sources */,
+				DE32F70F258624B8008FA04D /* GetTransactionListApiTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,7 +590,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yorkcoding.iOSTechnicalTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -590,7 +609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yorkcoding.iOSTechnicalTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -598,8 +617,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8F31C8BC076EAF93734F422 /* Pods-iOSTechnicalTaskTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSTechnicalTaskTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
@@ -610,6 +629,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yorkcoding.iOSTechnicalTaskTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTechnicalTask.app/iOSTechnicalTask";
@@ -620,8 +640,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 95C2A829BB16966FE2E40534 /* Pods-iOSTechnicalTaskTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSTechnicalTaskTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
