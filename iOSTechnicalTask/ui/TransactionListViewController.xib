@@ -10,16 +10,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionListViewController" customModule="iOSTechnicalTask" customModuleProvider="target">
             <connections>
+                <outlet property="tableViewTransaction" destination="skg-8y-xLb" id="a6E-kB-ppo"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Rb8-yR-CIF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="skg-8y-xLb">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="139" y="42"/>
+            <constraints>
+                <constraint firstItem="skg-8y-xLb" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="a54-BZ-kIX"/>
+                <constraint firstItem="skg-8y-xLb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eju-Kl-W5n"/>
+                <constraint firstItem="skg-8y-xLb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hqu-77-MWJ"/>
+                <constraint firstItem="skg-8y-xLb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="o51-Ih-vPU"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="137.68115942028987" y="41.517857142857139"/>
         </view>
     </objects>
     <resources>

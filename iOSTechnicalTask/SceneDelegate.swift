@@ -21,10 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // 3. Create a view hierarchy programmatically
         let viewController = TransactionListViewController(nibName: "TransactionListViewController", bundle: nil)
-        let navigation = UINavigationController(rootViewController: viewController)
+        let navigationVC = UINavigationController(rootViewController: viewController)
+        navigationVC.navigationBar.barTintColor = UIColor.black
+        navigationVC.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationVC.navigationBar.isTranslucent = false
         
         // 4. Set the root view controller of the window with your view controller
-        window.rootViewController = navigation
+        window.rootViewController = navigationVC
         
         // 5. Set the window and call makeKeyAndVisible()
         self.window = window
