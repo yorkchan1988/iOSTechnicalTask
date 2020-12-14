@@ -14,6 +14,7 @@
 		DE32F73E2586599A008FA04D /* GetTransactionList_success.json in Resources */ = {isa = PBXBuildFile; fileRef = DE32F73D2586599A008FA04D /* GetTransactionList_success.json */; };
 		DE32F74625865EAF008FA04D /* GetTransactionListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F74525865EAF008FA04D /* GetTransactionListResponse.swift */; };
 		DE32F75A258676E2008FA04D /* GetTransactionList_missingFields.json in Resources */ = {isa = PBXBuildFile; fileRef = DE32F759258676E2008FA04D /* GetTransactionList_missingFields.json */; };
+		DE32F7702587ACDD008FA04D /* GetTransactionList_emptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DE32F76F2587ACDD008FA04D /* GetTransactionList_emptyResponse.json */; };
 		DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */; };
 		DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */; };
 		DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EEF258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld */; };
@@ -52,6 +53,7 @@
 		DE32F73D2586599A008FA04D /* GetTransactionList_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetTransactionList_success.json; sourceTree = "<group>"; };
 		DE32F74525865EAF008FA04D /* GetTransactionListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListResponse.swift; sourceTree = "<group>"; };
 		DE32F759258676E2008FA04D /* GetTransactionList_missingFields.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetTransactionList_missingFields.json; sourceTree = "<group>"; };
+		DE32F76F2587ACDD008FA04D /* GetTransactionList_emptyResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetTransactionList_emptyResponse.json; sourceTree = "<group>"; };
 		DEAD1EE3258279FF00C851D6 /* iOSTechnicalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTechnicalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		DE32F73C25865923008FA04D /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE32F76F2587ACDD008FA04D /* GetTransactionList_emptyResponse.json */,
 				DE32F759258676E2008FA04D /* GetTransactionList_missingFields.json */,
 				DE32F73D2586599A008FA04D /* GetTransactionList_success.json */,
 			);
@@ -348,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE32F7702587ACDD008FA04D /* GetTransactionList_emptyResponse.json in Resources */,
 				DE32F73E2586599A008FA04D /* GetTransactionList_success.json in Resources */,
 				DE32F75A258676E2008FA04D /* GetTransactionList_missingFields.json in Resources */,
 			);
