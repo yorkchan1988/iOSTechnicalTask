@@ -28,6 +28,13 @@ class StubResponse {
         }
     }
     
+    func create500Response(host: String, path: String, json: String) -> HTTPStubsDescriptor {
+        return stub(condition: isHost(host) && isPath(path)) { _ in
+            let stubPath = OHPathForFile(json, type(of: self))
+            return HTTPStubsResponse(fileAtPath: stubPath!, statusCode: 500, headers: ["Content-Type":"application/json"])
+        }
+    }
+    
     func removeStub(stub: HTTPStubsDescriptor) {
         HTTPStubs.removeStub(stub)
     }
