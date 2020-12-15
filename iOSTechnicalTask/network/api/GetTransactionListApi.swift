@@ -13,7 +13,7 @@ class GetTransactionListApi {
     
     let path = API_PATH_GET_TRANSACTION_LIST
     
-    class func requestMappable() -> Observable<GetTransactionListResponse> {
+    func requestMappable() -> Observable<GetTransactionListResponse> {
         var request = URLRequest(url: NSURL(string: API_BASE_PATH+API_PATH_GET_TRANSACTION_LIST)! as URL)
         request.httpMethod = Alamofire.HTTPMethod.get.rawValue
         

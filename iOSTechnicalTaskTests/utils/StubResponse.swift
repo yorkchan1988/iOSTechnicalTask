@@ -15,7 +15,6 @@ import iOSTechnicalTask
 
 class StubResponse {
     
-    // MARK: - Properties
     static let shared = StubResponse()
 
     // Initialization

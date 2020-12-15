@@ -22,7 +22,7 @@ class GetTransactionListApiTest: XCTestCase {
             json: "GetTransactionList_success.json")
 
         // WHEN
-        let response = try GetTransactionListApi.requestMappable().toBlocking().first()
+        let response = try GetTransactionListApi().requestMappable().toBlocking().first()
 
         // THEN
         XCTAssertNotNil(response)
@@ -54,7 +54,7 @@ class GetTransactionListApiTest: XCTestCase {
             json: "GetTransactionList_missingFields.json")
         
         // WHEN
-        let response = try GetTransactionListApi.requestMappable().toBlocking().first()
+        let response = try GetTransactionListApi().requestMappable().toBlocking().first()
         
         // THEN
         XCTAssertNotNil(response)
