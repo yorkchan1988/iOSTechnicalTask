@@ -20,12 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         // 3. Create a view hierarchy programmatically
-        let viewController = TransactionListViewController(nibName: "TransactionListViewController", bundle: nil)
+        let viewController = createInitialViewController()
         let navigationVC = UINavigationController(rootViewController: viewController)
-        navigationVC.navigationBar.barTintColor = UIColor.black
-        navigationVC.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationVC.navigationBar.isTranslucent = false
-        
+        setNavigationControllerStyle(navigationVC)
         // 4. Set the root view controller of the window with your view controller
         window.rootViewController = navigationVC
         
@@ -65,6 +62,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-
+    // MARK: - private functions
+    private func createInitialViewController() -> UIViewController {
+        let viewController = TransactionListViewController(nibName: "TransactionListViewController", bundle: nil)
+        let api = GetTransactionListApi()
+        let viewModel = TransactionListViewModel(api: api)
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    
+    private func setNavigationControllerStyle(_ navigationVC: UINavigationController) {
+        navigationVC.navigationBar.barTintColor = UIColor.black
+        navigationVC.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationVC.navigationBar.isTranslucent = false
+    }
 }
 

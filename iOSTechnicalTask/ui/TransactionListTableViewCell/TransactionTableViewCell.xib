@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mps-ug-EGP" customClass="TransactionTableVIewCell" customModule="iOSTechnicalTask" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mps-ug-EGP" customClass="TransactionTableViewCell" customModule="iOSTechnicalTask" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mps-ug-EGP" id="UU1-ef-8f5">
@@ -60,8 +60,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Qbj-Wv-MZp" secondAttribute="trailing" constant="10" id="02N-jR-PRi"/>
+                    <constraint firstAttribute="bottom" secondItem="ygW-0k-JlU" secondAttribute="bottom" priority="999" constant="10" id="0cs-Xc-hso"/>
                     <constraint firstItem="Qbj-Wv-MZp" firstAttribute="leading" secondItem="ygW-0k-JlU" secondAttribute="trailing" constant="10" id="1ds-XJ-2Gd"/>
-                    <constraint firstItem="ygW-0k-JlU" firstAttribute="centerY" secondItem="UU1-ef-8f5" secondAttribute="centerY" id="Wa5-fX-uV5"/>
+                    <constraint firstItem="ygW-0k-JlU" firstAttribute="top" secondItem="UU1-ef-8f5" secondAttribute="top" constant="10" id="ecJ-Ee-uVy"/>
                     <constraint firstItem="Qbj-Wv-MZp" firstAttribute="centerY" secondItem="UU1-ef-8f5" secondAttribute="centerY" id="egW-n0-ShM"/>
                     <constraint firstItem="ygW-0k-JlU" firstAttribute="leading" secondItem="UU1-ef-8f5" secondAttribute="leading" constant="10" id="fY4-7F-iys"/>
                 </constraints>
