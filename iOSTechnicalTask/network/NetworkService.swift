@@ -19,12 +19,12 @@ class NetworkService {
             .validate(contentType: ["application/json"])
             .string()
             .map({ (jsonString) -> T in
-                if let object = Mapper<T>().map(JSONString: jsonString) {
-                    return object
-                }
-                else {
+                // check if returned response can be parsed into JSON
+                // if not, throw parsing error
+                guard let object = Mapper<T>().map(JSONString: jsonString) else {
                     throw NetworkError.parsingError(request.url?.relativePath ?? "")
                 }
+                return object
             })
             .asObservable()
     }
