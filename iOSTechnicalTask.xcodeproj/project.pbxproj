@@ -24,7 +24,6 @@
 		DE32F78A25891509008FA04D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F78925891509008FA04D /* Utils.swift */; };
 		DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */; };
 		DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */; };
-		DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EEF258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld */; };
 		DEAD1EF325827A0000C851D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAD1EF225827A0000C851D6 /* Assets.xcassets */; };
 		DEAD1EF625827A0000C851D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAD1EF425827A0000C851D6 /* LaunchScreen.storyboard */; };
 		DEC63C2D258E4C0200B077BD /* multipleTransactions.json in Resources */ = {isa = PBXBuildFile; fileRef = DEC63C29258E4C0200B077BD /* multipleTransactions.json */; };
@@ -76,7 +75,6 @@
 		DEAD1EE3258279FF00C851D6 /* iOSTechnicalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTechnicalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEAD1EF0258279FF00C851D6 /* iOSTechnicalTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSTechnicalTask.xcdatamodel; sourceTree = "<group>"; };
 		DEAD1EF225827A0000C851D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEAD1EF525827A0000C851D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEAD1EF725827A0000C851D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 				DEAD1EF225827A0000C851D6 /* Assets.xcassets */,
 				DEAD1EF425827A0000C851D6 /* LaunchScreen.storyboard */,
 				DEAD1EF725827A0000C851D6 /* Info.plist */,
-				DEAD1EEF258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld */,
 			);
 			path = iOSTechnicalTask;
 			sourceTree = "<group>";
@@ -509,7 +506,6 @@
 				DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */,
 				DE32F74625865EAF008FA04D /* GetTransactionListResponse.swift in Sources */,
 				DEE366BD2585FDB000AF5BCD /* TransactionTableViewCell.swift in Sources */,
-				DEAD1EF1258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld in Sources */,
 				DE32F77E258912BA008FA04D /* TransactionTableViewCellModel.swift in Sources */,
 				DEE366FA25861A6800AF5BCD /* GetTransactionListApi.swift in Sources */,
 				DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */,
@@ -785,19 +781,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DEAD1EEF258279FF00C851D6 /* iOSTechnicalTask.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DEAD1EF0258279FF00C851D6 /* iOSTechnicalTask.xcdatamodel */,
-			);
-			currentVersion = DEAD1EF0258279FF00C851D6 /* iOSTechnicalTask.xcdatamodel */;
-			path = iOSTechnicalTask.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DEAD1EDB258279FE00C851D6 /* Project object */;
 }
