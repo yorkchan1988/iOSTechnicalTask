@@ -12,6 +12,13 @@ import RxDataSources
 
 class TransactionListViewModel {
     
+    enum ViewState {
+        case edit
+        case view
+    }
+    
+    let viewState = BehaviorRelay<ViewState>(value: .view)
+    let rightBarButtonTitle = BehaviorRelay<String>(value: "Edit")
     let datasource = BehaviorRelay<[SectionModel<String, Transaction>]>(value: [SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [])])
     let error = PublishRelay<NetworkError>()
     
@@ -23,6 +30,7 @@ class TransactionListViewModel {
         self.getTransactionListApi = api
     }
     
+    // MARK: - Network Call
     func getTransactionList() {
         // call api to get transactions
         getTransactionListApi.requestMappable()
@@ -59,5 +67,22 @@ class TransactionListViewModel {
                 }
             )
             .disposed(by: disposeBag)
+    }
+    
+    // MARK: - User Actions
+    func handleRightBarButtonPressed() {
+        changeViewState()
+    }
+    
+    // MARK: - Utility
+    private func changeViewState() {
+        switch viewState.value {
+        case .view:
+            viewState.accept(.edit)
+            rightBarButtonTitle.accept("Done")
+        case .edit:
+            viewState.accept(.view)
+            rightBarButtonTitle.accept("Edit")
+        }
     }
 }

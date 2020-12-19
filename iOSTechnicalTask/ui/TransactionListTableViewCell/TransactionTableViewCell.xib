@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Mps-ug-EGP" customClass="TransactionTableViewCell" customModule="iOSTechnicalTask" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Mps-ug-EGP" customClass="TransactionTableViewCell" customModule="iOSTechnicalTask" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mps-ug-EGP" id="UU1-ef-8f5">
@@ -57,14 +57,22 @@
                             <constraint firstItem="lIN-RF-7JG" firstAttribute="leading" secondItem="Qbj-Wv-MZp" secondAttribute="leading" id="uTL-lO-Ko3"/>
                         </constraints>
                     </view>
+                    <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZ4-s2-Vgh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                        <color key="backgroundColor" red="0.79607843140000001" green="0.20392156859999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Qbj-Wv-MZp" secondAttribute="trailing" constant="10" id="02N-jR-PRi"/>
                     <constraint firstAttribute="bottom" secondItem="ygW-0k-JlU" secondAttribute="bottom" priority="999" constant="10" id="0cs-Xc-hso"/>
                     <constraint firstItem="Qbj-Wv-MZp" firstAttribute="leading" secondItem="ygW-0k-JlU" secondAttribute="trailing" constant="10" id="1ds-XJ-2Gd"/>
+                    <constraint firstAttribute="bottom" secondItem="mZ4-s2-Vgh" secondAttribute="bottom" id="1kn-hp-kbg"/>
+                    <constraint firstAttribute="trailing" secondItem="mZ4-s2-Vgh" secondAttribute="trailing" id="GYC-ib-z7s"/>
+                    <constraint firstItem="mZ4-s2-Vgh" firstAttribute="leading" secondItem="UU1-ef-8f5" secondAttribute="leading" id="TbE-2m-ezg"/>
                     <constraint firstItem="ygW-0k-JlU" firstAttribute="top" secondItem="UU1-ef-8f5" secondAttribute="top" constant="10" id="ecJ-Ee-uVy"/>
                     <constraint firstItem="Qbj-Wv-MZp" firstAttribute="centerY" secondItem="UU1-ef-8f5" secondAttribute="centerY" id="egW-n0-ShM"/>
                     <constraint firstItem="ygW-0k-JlU" firstAttribute="leading" secondItem="UU1-ef-8f5" secondAttribute="leading" constant="10" id="fY4-7F-iys"/>
+                    <constraint firstItem="mZ4-s2-Vgh" firstAttribute="top" secondItem="UU1-ef-8f5" secondAttribute="top" id="ufZ-7X-bVH"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -72,6 +80,7 @@
                 <outlet property="lblPrice" destination="5TE-JJ-7dq" id="3Rn-zC-OsQ"/>
                 <outlet property="lblSubTitle" destination="CXY-km-nPp" id="0H2-jC-0sB"/>
                 <outlet property="lblTitle" destination="lIN-RF-7JG" id="Ch8-qZ-D0j"/>
+                <outlet property="viewSelectionOverlay" destination="mZ4-s2-Vgh" id="anV-5P-5be"/>
             </connections>
             <point key="canvasLocation" x="160.86956521739131" y="-162.05357142857142"/>
         </tableViewCell>

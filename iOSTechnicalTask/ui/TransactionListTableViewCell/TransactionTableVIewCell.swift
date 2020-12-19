@@ -16,6 +16,13 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblSubTitle: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var viewSelectionOverlay: UIView!
+    
+    override var isSelected: Bool {
+        didSet {
+            viewSelectionOverlay.isHidden = !isSelected
+        }
+    }
     
     private let disposeBag = DisposeBag()
     
