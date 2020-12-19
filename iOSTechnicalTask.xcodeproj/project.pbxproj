@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		52CCBCCDEDC6BF9CB57D89D3 /* Pods_iOSTechnicalTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */; };
 		714CD52509AEED0A0D03D917 /* Pods_iOSTechnicalTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37FFF0A0E0629B29EC42B9F /* Pods_iOSTechnicalTask.framework */; };
+		DE0F0895258B9FF500F2C5B4 /* MappableApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F0894258B9FF500F2C5B4 /* MappableApi.swift */; };
+		DE0F08A6258BB11400F2C5B4 /* GetTransactionListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F08A5258BB11400F2C5B4 /* GetTransactionListViewModelTest.swift */; };
+		DE0F08AD258BB1D900F2C5B4 /* MockGetTransactionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F08AC258BB1D900F2C5B4 /* MockGetTransactionApi.swift */; };
+		DE0F08B3258BBBEA00F2C5B4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F08B2258BBBEA00F2C5B4 /* AppError.swift */; };
+		DE0F08B7258BC57E00F2C5B4 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0F08B6258BC57E00F2C5B4 /* TestUtils.swift */; };
 		DE32F70F258624B8008FA04D /* GetTransactionListApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F70E258624B8008FA04D /* GetTransactionListApiTest.swift */; };
 		DE32F737258657FB008FA04D /* StubResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F736258657FB008FA04D /* StubResponse.swift */; };
 		DE32F73E2586599A008FA04D /* GetTransactionList_success.json in Resources */ = {isa = PBXBuildFile; fileRef = DE32F73D2586599A008FA04D /* GetTransactionList_success.json */; };
@@ -50,6 +55,11 @@
 		B37FFF0A0E0629B29EC42B9F /* Pods_iOSTechnicalTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B903B03ED2B76302DA6461C2 /* Pods_iOSTechnicalTask_iOSTechnicalTaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTask_iOSTechnicalTaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C87418E0DB64119148E98022 /* Pods-iOSTechnicalTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTask.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTask/Pods-iOSTechnicalTask.debug.xcconfig"; sourceTree = "<group>"; };
+		DE0F0894258B9FF500F2C5B4 /* MappableApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MappableApi.swift; sourceTree = "<group>"; };
+		DE0F08A5258BB11400F2C5B4 /* GetTransactionListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListViewModelTest.swift; sourceTree = "<group>"; };
+		DE0F08AC258BB1D900F2C5B4 /* MockGetTransactionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetTransactionApi.swift; sourceTree = "<group>"; };
+		DE0F08B2258BBBEA00F2C5B4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		DE0F08B6258BC57E00F2C5B4 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		DE32F70E258624B8008FA04D /* GetTransactionListApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListApiTest.swift; sourceTree = "<group>"; };
 		DE32F736258657FB008FA04D /* StubResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubResponse.swift; sourceTree = "<group>"; };
 		DE32F73D2586599A008FA04D /* GetTransactionList_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetTransactionList_success.json; sourceTree = "<group>"; };
@@ -122,6 +132,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE0F08A4258BB0EA00F2C5B4 /* viewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F08AB258BB1C200F2C5B4 /* api */,
+				DE0F08A5258BB11400F2C5B4 /* GetTransactionListViewModelTest.swift */,
+			);
+			path = viewModelTest;
+			sourceTree = "<group>";
+		};
+		DE0F08AB258BB1C200F2C5B4 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F08AC258BB1D900F2C5B4 /* MockGetTransactionApi.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 		DE32F70D2586249A008FA04D /* networkApiTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				DE32F736258657FB008FA04D /* StubResponse.swift */,
+				DE0F08B6258BC57E00F2C5B4 /* TestUtils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -189,6 +217,7 @@
 		DEAD1EFF25827A0000C851D6 /* iOSTechnicalTaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE0F08A4258BB0EA00F2C5B4 /* viewModelTest */,
 				DE32F73C25865923008FA04D /* resources */,
 				DE32F735258657F0008FA04D /* utils */,
 				DE32F70D2586249A008FA04D /* networkApiTest */,
@@ -213,6 +242,7 @@
 			children = (
 				DEE366F025861A3E00AF5BCD /* api */,
 				DEE366D225860AB100AF5BCD /* NetworkService.swift */,
+				DE0F0894258B9FF500F2C5B4 /* MappableApi.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -240,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				DEE366E5258613AB00AF5BCD /* NetworkError.swift */,
+				DE0F08B2258BBBEA00F2C5B4 /* AppError.swift */,
 			);
 			path = error;
 			sourceTree = "<group>";
@@ -455,6 +486,7 @@
 				DEE366FE25861A9C00AF5BCD /* Constants.swift in Sources */,
 				DEE366E6258613AB00AF5BCD /* NetworkError.swift in Sources */,
 				DE32F78A25891509008FA04D /* Utils.swift in Sources */,
+				DE0F08B3258BBBEA00F2C5B4 /* AppError.swift in Sources */,
 				DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */,
 				DE32F74625865EAF008FA04D /* GetTransactionListResponse.swift in Sources */,
 				DEE366BD2585FDB000AF5BCD /* TransactionTableViewCell.swift in Sources */,
@@ -463,6 +495,7 @@
 				DEE366FA25861A6800AF5BCD /* GetTransactionListApi.swift in Sources */,
 				DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */,
 				DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */,
+				DE0F0895258B9FF500F2C5B4 /* MappableApi.swift in Sources */,
 				DEE366D325860AB100AF5BCD /* NetworkService.swift in Sources */,
 				DEE366EB258615AD00AF5BCD /* Transaction.swift in Sources */,
 			);
@@ -472,8 +505,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0F08AD258BB1D900F2C5B4 /* MockGetTransactionApi.swift in Sources */,
 				DE32F737258657FB008FA04D /* StubResponse.swift in Sources */,
 				DE32F70F258624B8008FA04D /* GetTransactionListApiTest.swift in Sources */,
+				DE0F08B7258BC57E00F2C5B4 /* TestUtils.swift in Sources */,
+				DE0F08A6258BB11400F2C5B4 /* GetTransactionListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

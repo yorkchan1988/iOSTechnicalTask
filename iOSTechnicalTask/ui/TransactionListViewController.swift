@@ -44,7 +44,7 @@ class TransactionListViewController : UIViewController {
             return cell
         }
         
-        viewModel.datasource.bind(to: tableViewTransaction.rx.items(dataSource: datasource)).disposed(by: disposeBag)
+        viewModel.datasource.asDriver().drive(tableViewTransaction.rx.items(dataSource: datasource)).disposed(by: disposeBag)
     }
     
     // MARK: - Cosmetic / Text

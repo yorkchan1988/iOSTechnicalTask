@@ -7,16 +7,16 @@
 
 import Foundation
 
-enum NetworkError {
-    case serverError(String, String)
+enum NetworkError: Equatable {
+    case serverError(String)
     case parsingError(String)
 }
 
 extension NetworkError : LocalizedError {
     public var errorDescription: String? {
         switch self {
-        case .serverError(let apiPath, let message):
-            return apiPath + "-" + message
+        case .serverError(let apiPath):
+            return apiPath + "-" + ERROR_MESSAGE_NETWORK_ERROR
         case .parsingError(let apiPath):
             return apiPath + " - " + ERROR_MESSAGE_PARSING_ERROR
         }

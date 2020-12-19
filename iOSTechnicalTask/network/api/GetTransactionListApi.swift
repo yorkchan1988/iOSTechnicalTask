@@ -9,11 +9,11 @@ import Foundation
 import Alamofire
 import RxSwift
 
-class GetTransactionListApi {
+class GetTransactionListApi: MappableApi<GetTransactionListResponse> {
     
     let path = API_PATH_GET_TRANSACTION_LIST
     
-    func requestMappable() -> Observable<GetTransactionListResponse> {
+    override func requestMappable() -> Observable<Result<GetTransactionListResponse, NetworkError>> {
         var request = URLRequest(url: NSURL(string: API_BASE_PATH+API_PATH_GET_TRANSACTION_LIST)! as URL)
         request.httpMethod = Alamofire.HTTPMethod.get.rawValue
         

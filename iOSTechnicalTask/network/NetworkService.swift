@@ -12,20 +12,34 @@ import ObjectMapper
 
 class NetworkService {
     
-    class func requestJSON<T : Mappable>(request: URLRequest, responseType: T.Type) -> Observable<T> {
+    class func requestJSON<T : Mappable>(request: URLRequest, responseType: T.Type) -> Observable<Result<T, NetworkError>> {
         
         return RxAlamofire.request(request)
-            .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
-            .string()
-            .map({ (jsonString) -> T in
-                // check if returned response can be parsed into JSON
-                // if not, throw parsing error
-                guard let object = Mapper<T>().map(JSONString: jsonString) else {
-                    throw NetworkError.parsingError(request.url?.relativePath ?? "")
-                }
-                return object
-            })
+            .responseString()
+            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .mappable(ofType: T.self)
             .asObservable()
+    }
+}
+
+extension Observable where Element == (HTTPURLResponse, String){
+    fileprivate func mappable<T : Mappable>(ofType type: T.Type) -> Observable<Result<T, NetworkError>>{
+        return self.map{ (httpURLResponse, string) -> Result<T, NetworkError> in
+            
+            let apiPath = httpURLResponse.url?.relativePath ?? ""
+            switch httpURLResponse.statusCode{
+            case 200..<300:
+                // is status code is successful we can safely decode to our expected type T
+                guard let object = Mapper<T>().map(JSONString: string) else {
+                    throw NetworkError.parsingError(apiPath)
+                }
+                
+                return .success(object)
+            default:
+                // otherwise try
+                return .failure(NetworkError.serverError(apiPath))
+            }
+        }
     }
 }
