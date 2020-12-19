@@ -41,6 +41,7 @@
 		DEE366EB258615AD00AF5BCD /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366EA258615AD00AF5BCD /* Transaction.swift */; };
 		DEE366FA25861A6800AF5BCD /* GetTransactionListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */; };
 		DEE366FE25861A9C00AF5BCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366FD25861A9C00AF5BCD /* Constants.swift */; };
+		DEE6E03B258E6DF900A31F33 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6E03A258E6DF900A31F33 /* AppColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		DEE366EA258615AD00AF5BCD /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListApi.swift; sourceTree = "<group>"; };
 		DEE366FD25861A9C00AF5BCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DEE6E03A258E6DF900A31F33 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		F8F31C8BC076EAF93734F422 /* Pods-iOSTechnicalTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -274,6 +276,7 @@
 				DEC63C39258E514E00B077BD /* AlertView.swift */,
 				DEE366FD25861A9C00AF5BCD /* Constants.swift */,
 				DE32F78925891509008FA04D /* Utils.swift */,
+				DEE6E03A258E6DF900A31F33 /* AppColor.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				DE32F78A25891509008FA04D /* Utils.swift in Sources */,
 				DE0F08B3258BBBEA00F2C5B4 /* AppError.swift in Sources */,
 				DEE366862585F29400AF5BCD /* TransactionListViewModel.swift in Sources */,
+				DEE6E03B258E6DF900A31F33 /* AppColor.swift in Sources */,
 				DE32F74625865EAF008FA04D /* GetTransactionListResponse.swift in Sources */,
 				DEE366BD2585FDB000AF5BCD /* TransactionTableViewCell.swift in Sources */,
 				DE32F77E258912BA008FA04D /* TransactionTableViewCellModel.swift in Sources */,

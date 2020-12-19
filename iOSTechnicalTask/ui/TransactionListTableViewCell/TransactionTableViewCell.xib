@@ -17,11 +17,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ygW-0k-JlU">
-                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                        <rect key="frame" x="16" y="16" width="38" height="38"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="3Cx-64-6By"/>
+                            <constraint firstAttribute="height" constant="38" id="3Cx-64-6By"/>
                             <constraint firstAttribute="width" secondItem="ygW-0k-JlU" secondAttribute="height" multiplier="1:1" id="ihV-5b-kHM"/>
-                            <constraint firstAttribute="width" constant="50" id="ohF-6H-NgV"/>
+                            <constraint firstAttribute="width" constant="38" id="ohF-6H-NgV"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-Wv-MZp">
@@ -64,14 +64,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Qbj-Wv-MZp" secondAttribute="trailing" constant="10" id="02N-jR-PRi"/>
-                    <constraint firstAttribute="bottom" secondItem="ygW-0k-JlU" secondAttribute="bottom" priority="999" constant="10" id="0cs-Xc-hso"/>
-                    <constraint firstItem="Qbj-Wv-MZp" firstAttribute="leading" secondItem="ygW-0k-JlU" secondAttribute="trailing" constant="10" id="1ds-XJ-2Gd"/>
+                    <constraint firstAttribute="bottom" secondItem="ygW-0k-JlU" secondAttribute="bottom" priority="999" constant="16" id="0cs-Xc-hso"/>
+                    <constraint firstItem="Qbj-Wv-MZp" firstAttribute="leading" secondItem="ygW-0k-JlU" secondAttribute="trailing" constant="16" id="1ds-XJ-2Gd"/>
                     <constraint firstAttribute="bottom" secondItem="mZ4-s2-Vgh" secondAttribute="bottom" id="1kn-hp-kbg"/>
                     <constraint firstAttribute="trailing" secondItem="mZ4-s2-Vgh" secondAttribute="trailing" id="GYC-ib-z7s"/>
                     <constraint firstItem="mZ4-s2-Vgh" firstAttribute="leading" secondItem="UU1-ef-8f5" secondAttribute="leading" id="TbE-2m-ezg"/>
-                    <constraint firstItem="ygW-0k-JlU" firstAttribute="top" secondItem="UU1-ef-8f5" secondAttribute="top" constant="10" id="ecJ-Ee-uVy"/>
+                    <constraint firstItem="ygW-0k-JlU" firstAttribute="top" secondItem="UU1-ef-8f5" secondAttribute="top" constant="16" id="ecJ-Ee-uVy"/>
                     <constraint firstItem="Qbj-Wv-MZp" firstAttribute="centerY" secondItem="UU1-ef-8f5" secondAttribute="centerY" id="egW-n0-ShM"/>
-                    <constraint firstItem="ygW-0k-JlU" firstAttribute="leading" secondItem="UU1-ef-8f5" secondAttribute="leading" constant="10" id="fY4-7F-iys"/>
+                    <constraint firstItem="ygW-0k-JlU" firstAttribute="leading" secondItem="UU1-ef-8f5" secondAttribute="leading" constant="16" id="fY4-7F-iys"/>
                     <constraint firstItem="mZ4-s2-Vgh" firstAttribute="top" secondItem="UU1-ef-8f5" secondAttribute="top" id="ufZ-7X-bVH"/>
                 </constraints>
             </tableViewCellContentView>

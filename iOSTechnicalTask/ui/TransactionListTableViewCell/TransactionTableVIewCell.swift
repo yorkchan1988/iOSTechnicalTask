@@ -32,6 +32,7 @@ class TransactionTableViewCell: UITableViewCell {
             .subscribe( onNext: { [weak self] (imagePath) in
                 guard let self = self else { return }
                 
+                self.configureImageView()
                 let url = URL(string: imagePath)
                 self.ivIcon.kf.setImage(with: url)
             })
@@ -53,5 +54,11 @@ class TransactionTableViewCell: UITableViewCell {
             }
         )
         .disposed(by: disposeBag)
+    }
+    
+    private func configureImageView() {
+        ivIcon.layer.cornerRadius = ivIcon.bounds.width / 2.0
+        ivIcon.layer.borderWidth = 2.0
+        ivIcon.layer.borderColor = AppColor.borderLightGrey().cgColor
     }
 }
