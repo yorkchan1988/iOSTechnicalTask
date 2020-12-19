@@ -59,6 +59,10 @@ class TransactionListViewModel {
         changeViewState()
     }
     
+    func resetAllSelectedTransactions() {
+        selectedTransactions = []
+    }
+    
     func removeSelectedTransactions() {
         // remove transactions from selectedTransactions
         let remainingTransactions = transactions.value.filter { !selectedTransactions.contains($0) }

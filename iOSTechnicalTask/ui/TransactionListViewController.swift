@@ -56,7 +56,7 @@ class TransactionListViewController : UIViewController {
                 case TransactionListViewModel.ViewState.view:
                     self.hideRemoveButton()
                     self.setTableViewTransactionEditable(isEditable: false)
-                    self.resetAllSelectionCell()
+                    self.resetAllSelectedTransactions()
                     break;
                 }
             }
@@ -181,8 +181,9 @@ class TransactionListViewController : UIViewController {
         tableViewTransaction.allowsMultipleSelectionDuringEditing = isEditable
     }
     
-    private func resetAllSelectionCell() {
+    private func resetAllSelectedTransactions() {
         tableViewTransaction.reloadData()
+        viewModel.resetAllSelectedTransactions()
     }
 }
 
