@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-struct Transaction: Mappable {
+struct Transaction: Mappable, Equatable {
     var tid : String?
     var date : String?
     var description : String?
@@ -33,6 +33,10 @@ struct Transaction: Mappable {
         productId <- map["product.id"]
         productTitle <- map["product.title"]
         productIcon <- map["product.icon"]
+    }
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.tid == rhs.tid
     }
 }
 

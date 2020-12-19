@@ -16,6 +16,7 @@ class TransactionTableViewCellModel {
     let category = BehaviorRelay<String>(value: "")
     let amount = BehaviorRelay<String>(value: "")
     let currency = BehaviorRelay<String>(value: "")
+    let isSelected = BehaviorRelay<Bool>(value: false)
     
     required init(transaction: Transaction) {
         imagePath.accept(transaction.productIcon ?? "")
@@ -23,5 +24,9 @@ class TransactionTableViewCellModel {
         category.accept(transaction.category ?? "")
         amount.accept(String(format: "%.2f", transaction.amount ?? ""))
         currency.accept(currencyToPoundSymbol(currency: transaction.currencyIso))
+    }
+    
+    func setSelected(isSelected selected: Bool) {
+        isSelected.accept(selected)
     }
 }

@@ -39,6 +39,9 @@
                                         <constraint firstAttribute="height" constant="44" id="VxG-6p-cVY"/>
                                     </constraints>
                                     <state key="normal" title="Remove"/>
+                                    <connections>
+                                        <action selector="onRemoveButtonPressed" destination="-1" eventType="touchUpInside" id="mPq-B5-alo"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="RuJ-5A-MjD"/>

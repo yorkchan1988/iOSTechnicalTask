@@ -19,10 +19,12 @@ class TransactionListViewModel {
     
     let viewState = BehaviorRelay<ViewState>(value: .view)
     let rightBarButtonTitle = BehaviorRelay<String>(value: "Edit")
-    let datasource = BehaviorRelay<[SectionModel<String, Transaction>]>(value: [SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [])])
+    let transactions = BehaviorRelay<[Transaction]>(value: [])
     let error = PublishRelay<NetworkError>()
     
     private let getTransactionListApi: MappableApi<GetTransactionListResponse>
+    
+    private var selectedTransactions: [Transaction] = []
     
     private let disposeBag = DisposeBag()
     
@@ -30,7 +32,7 @@ class TransactionListViewModel {
         self.getTransactionListApi = api
     }
     
-    // MARK: - Network Call
+    // MARK: - Public functions
     func getTransactionList() {
         // call api to get transactions
         getTransactionListApi.requestMappable()
@@ -40,27 +42,7 @@ class TransactionListViewModel {
                     
                     switch (result) {
                     case let .success(response):
-                        // map transactions into SectionModel which is used as datasource of tableview
-                        let sectionModels = response.data.map { (transactions) -> [SectionModel<String, Transaction>] in
-                            var sections: [SectionModel<String, Transaction>] = []
-                            transactions.forEach { (transaction) in
-                                // if the model name is same as TransactionListViewModel.TRANSACTION_SECTION_HEADER_NAME
-                                // then append transaction into item of the SectionModel
-                                if let index = sections.firstIndex(where: { $0.model == TRANSACTION_SECTION_HEADER_NAME }) {
-                                    sections[index].items.append(transaction)
-                                }
-                                // else create a new SectionModel (which is unexpected)
-                                else {
-                                    let section = SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [transaction])
-                                    sections.append(section)
-                                }
-                            }
-                            return sections
-                        }
-                        
-                        if let sectionModels = sectionModels {
-                            self.datasource.accept(sectionModels)
-                        }
+                        self.transactions.accept(response.data ?? [])
                     case let .failure(error):
                         self.error.accept(error)
                     }
@@ -69,9 +51,25 @@ class TransactionListViewModel {
             .disposed(by: disposeBag)
     }
     
-    // MARK: - User Actions
     func handleRightBarButtonPressed() {
         changeViewState()
+    }
+    
+    func removeSelectedTransactions() {
+        let remainingTransactions = transactions.value.filter { !selectedTransactions.contains($0) }
+        transactions.accept(remainingTransactions)
+    }
+    
+    func didSelectTransaction(index: Int) {
+        let transaction = transactions.value[index]
+        selectedTransactions.append(transaction)
+    }
+    
+    func didDeselectTransaction(index: Int) {
+        let transaction = transactions.value[index]
+        if let idxInSelected = selectedTransactions.firstIndex(where: { $0 == transaction }) {
+            selectedTransactions.remove(at: idxInSelected)
+        }
     }
     
     // MARK: - Utility

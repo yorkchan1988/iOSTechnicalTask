@@ -18,12 +18,6 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var viewSelectionOverlay: UIView!
     
-    override var isSelected: Bool {
-        didSet {
-            viewSelectionOverlay.isHidden = !isSelected
-        }
-    }
-    
     private let disposeBag = DisposeBag()
     
     var viewModel : TransactionTableViewCellModel! {
@@ -52,5 +46,12 @@ class TransactionTableViewCell: UITableViewCell {
         }
         .disposed(by: disposeBag)
 
+        viewModel.isSelected.subscribe(
+            onNext: { [weak self] (isSelected) in
+                guard let self = self else { return }
+                self.viewSelectionOverlay.isHidden = !isSelected
+            }
+        )
+        .disposed(by: disposeBag)
     }
 }

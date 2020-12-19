@@ -38,7 +38,12 @@ class TransactionListViewController : UIViewController {
     // MARK: - Data Binding
     private func bindViewModel() {
         
-        viewModel.viewState.observeOn(MainScheduler.instance).subscribe(
+        // According to ViewState,
+        // 1. show/hide remove button
+        // 2. enable/disable TableView editing
+        viewModel.viewState
+            .observeOn(MainScheduler.instance)
+            .subscribe(
             onNext: { [weak self] (viewState) in
                 guard let self = self else { return }
                 
@@ -56,21 +61,46 @@ class TransactionListViewController : UIViewController {
             }
         ).disposed(by: disposeBag)
 
-        
+        // change title of right UIBarButton
         if let barButtonItem = navigationItem.rightBarButtonItem {
             viewModel.rightBarButtonTitle.asDriver().drive(barButtonItem.rx.title).disposed(by: disposeBag)
         }
         
+        // cell for row at indexPath
         let datasource = RxTableViewSectionedReloadDataSource<SectionModel<String, Transaction>> { (datasource, tableView, indexPath, transaction) -> UITableViewCell in
-            
+
             let cellModel = TransactionTableViewCellModel(transaction: transaction)
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TransactionTableViewCell.self), for: indexPath) as! TransactionTableViewCell
             cell.viewModel = cellModel
-            
+
             return cell
         }
         
-        viewModel.datasource.asDriver().drive(tableViewTransaction.rx.items(dataSource: datasource)).disposed(by: disposeBag)
+        // map transactions to sectionModels
+        viewModel.transactions
+            .map({ (transactions) -> [SectionModel<String, Transaction>] in
+                
+                var sectionModels: [SectionModel<String, Transaction>] = []
+                
+                transactions.forEach { (transaction) in
+                    // if the model name is same as TransactionListViewModel.TRANSACTION_SECTION_HEADER_NAME
+                    // then append transaction into item of the SectionModel
+                    if let index = sectionModels.firstIndex(where: { $0.model == TRANSACTION_SECTION_HEADER_NAME }) {
+                        sectionModels[index].items.append(transaction)
+                    }
+                    // else create a new SectionModel (which is unexpected)
+                    else {
+                        let section = SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [transaction])
+                        sectionModels.append(section)
+                    }
+                }
+                
+                return sectionModels
+            })
+            // if error, just return
+            .asDriver(onErrorJustReturn: [SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [])])
+            .drive(tableViewTransaction.rx.items(dataSource: datasource))
+            .disposed(by: disposeBag)
     }
     
     // MARK: - Cosmetic / Text
@@ -96,6 +126,10 @@ class TransactionListViewController : UIViewController {
         viewModel.handleRightBarButtonPressed()
     }
     
+    @IBAction private func onRemoveButtonPressed() {
+        viewModel.removeSelectedTransactions()
+    }
+    
     // MARK: - View State Change
     private func showRemoveButton() {
         UIView.animate(withDuration: 0.5, delay: 0, animations: { [weak self] () in
@@ -108,7 +142,7 @@ class TransactionListViewController : UIViewController {
     }
     
     private func hideRemoveButton() {
-        UIView.animate(withDuration: 0.5, delay: 0, animations: { [weak self] () in
+        UIView.animate(withDuration: 0.3, delay: 0, animations: { [weak self] () in
             guard let self = self else { return }
             self.viewRemoveContainer.alpha = 0
         }, completion: { [weak self] finished in
@@ -131,17 +165,17 @@ extension TransactionListViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView.isEditing) {
-            print(indexPath.row)
             let cell = tableView.cellForRow(at: indexPath) as! TransactionTableViewCell
-            cell.isSelected = true
+            cell.viewModel.setSelected(isSelected: true)
+            viewModel.didSelectTransaction(index: indexPath.row)
         }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if (tableView.isEditing) {
-            print(indexPath.row)
             let cell = tableView.cellForRow(at: indexPath) as! TransactionTableViewCell
-            cell.isSelected = false
+            cell.viewModel.setSelected(isSelected: false)
+            viewModel.didDeselectTransaction(index: indexPath.row)
         }
     }
 }
