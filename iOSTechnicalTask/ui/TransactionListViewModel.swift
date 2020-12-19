@@ -56,6 +56,7 @@ class TransactionListViewModel {
     }
     
     func removeSelectedTransactions() {
+        // remove transactions from selectedTransactions
         let remainingTransactions = transactions.value.filter { !selectedTransactions.contains($0) }
         transactions.accept(remainingTransactions)
     }
@@ -66,6 +67,8 @@ class TransactionListViewModel {
     }
     
     func didDeselectTransaction(index: Int) {
+        // check if transaction exists
+        // if yes, remove selected transactions
         let transaction = transactions.value[index]
         if let idxInSelected = selectedTransactions.firstIndex(where: { $0 == transaction }) {
             selectedTransactions.remove(at: idxInSelected)

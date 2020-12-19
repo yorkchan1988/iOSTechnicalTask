@@ -97,7 +97,7 @@ class TransactionListViewController : UIViewController {
                 
                 return sectionModels
             })
-            // if error, just return
+            // if error, just return empty array
             .asDriver(onErrorJustReturn: [SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [])])
             .drive(tableViewTransaction.rx.items(dataSource: datasource))
             .disposed(by: disposeBag)
@@ -132,7 +132,7 @@ class TransactionListViewController : UIViewController {
     
     // MARK: - View State Change
     private func showRemoveButton() {
-        UIView.animate(withDuration: 0.5, delay: 0, animations: { [weak self] () in
+        UIView.animate(withDuration: 0.3, delay: 0, animations: { [weak self] () in
             guard let self = self else { return }
             self.viewRemoveContainer.alpha = 1
         }, completion: { [weak self] finished in
