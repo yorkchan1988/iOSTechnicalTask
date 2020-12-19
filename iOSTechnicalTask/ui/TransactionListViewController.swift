@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RxDataSources
 import RxSwift
+import ProgressHUD
 
 class TransactionListViewController : UIViewController {
     
@@ -57,6 +58,20 @@ class TransactionListViewController : UIViewController {
                     self.setTableViewTransactionEditable(isEditable: false)
                     self.resetAllSelectionCell()
                     break;
+                }
+            }
+        ).disposed(by: disposeBag)
+        
+        // show/hide progresshud
+        viewModel.isLoading.observeOn(MainScheduler.instance)
+            .subscribe(
+            onNext: { (isLoading) in
+                
+                if (isLoading) {
+                    ProgressHUD.show()
+                }
+                else {
+                    ProgressHUD.dismiss()
                 }
             }
         ).disposed(by: disposeBag)

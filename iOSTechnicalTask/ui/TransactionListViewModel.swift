@@ -18,6 +18,7 @@ class TransactionListViewModel {
     }
     
     let viewState = BehaviorRelay<ViewState>(value: .view)
+    let isLoading = BehaviorRelay<Bool>(value: false)
     let rightBarButtonTitle = BehaviorRelay<String>(value: "Edit")
     let transactions = BehaviorRelay<[Transaction]>(value: [])
     let error = PublishRelay<NetworkError>()
@@ -34,11 +35,14 @@ class TransactionListViewModel {
     
     // MARK: - Functions for ViewController
     func getTransactionList() {
+        isLoading.accept(true)
         // call api to get transactions
         getTransactionListApi.requestMappable()
             .subscribe(
                 onNext: { [weak self] (result) in
                     guard let self = self else { return }
+                    
+                    self.isLoading.accept(false)
                     
                     switch (result) {
                     case let .success(response):
