@@ -11,6 +11,9 @@ import Foundation
 let ERROR_MESSAGE_NETWORK_ERROR = "Unexpected network error"
 let ERROR_MESSAGE_PARSING_ERROR = "Fail to parse api response."
 
+// App Error Message
+let ERROR_MESSAGE_INVALID_INDEX = "invalid index"
+
 // Network API Path
 let API_HOST = "www.mocky.io"
 let API_BASE_PATH = "http://"+API_HOST

@@ -101,6 +101,16 @@ class TransactionListViewController : UIViewController {
             .asDriver(onErrorJustReturn: [SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [])])
             .drive(tableViewTransaction.rx.items(dataSource: datasource))
             .disposed(by: disposeBag)
+        
+        // show alert for any errors occurred
+        viewModel.error
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { error in
+                    AlertView.showErrorAlert(error: error, target: self)
+                }
+            )
+            .disposed(by: disposeBag)
     }
     
     // MARK: - Cosmetic / Text
@@ -167,7 +177,14 @@ extension TransactionListViewController : UITableViewDelegate {
         if (tableView.isEditing) {
             let cell = tableView.cellForRow(at: indexPath) as! TransactionTableViewCell
             cell.viewModel.setSelected(isSelected: true)
-            viewModel.didSelectTransaction(index: indexPath.row)
+            
+            do {
+                try viewModel.didSelectTransaction(index: indexPath.row)
+            }
+            catch {
+                AlertView.showErrorAlert(error: error, target: self)
+            }
+            
         }
     }
     
@@ -175,7 +192,13 @@ extension TransactionListViewController : UITableViewDelegate {
         if (tableView.isEditing) {
             let cell = tableView.cellForRow(at: indexPath) as! TransactionTableViewCell
             cell.viewModel.setSelected(isSelected: false)
-            viewModel.didDeselectTransaction(index: indexPath.row)
+            
+            do {
+                try viewModel.didDeselectTransaction(index: indexPath.row)
+            }
+            catch {
+                AlertView.showErrorAlert(error: error, target: self)
+            }
         }
     }
 }

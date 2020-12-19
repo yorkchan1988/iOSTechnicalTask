@@ -22,9 +22,9 @@ class TransactionListViewModel {
     let transactions = BehaviorRelay<[Transaction]>(value: [])
     let error = PublishRelay<NetworkError>()
     
-    private let getTransactionListApi: MappableApi<GetTransactionListResponse>
+    var selectedTransactions: [Transaction] = []
     
-    private var selectedTransactions: [Transaction] = []
+    private let getTransactionListApi: MappableApi<GetTransactionListResponse>
     
     private let disposeBag = DisposeBag()
     
@@ -32,7 +32,7 @@ class TransactionListViewModel {
         self.getTransactionListApi = api
     }
     
-    // MARK: - Public functions
+    // MARK: - Functions for ViewController
     func getTransactionList() {
         // call api to get transactions
         getTransactionListApi.requestMappable()
@@ -61,12 +61,18 @@ class TransactionListViewModel {
         transactions.accept(remainingTransactions)
     }
     
-    func didSelectTransaction(index: Int) {
+    func didSelectTransaction(index: Int) throws {
+        guard index >= 0 && index < transactions.value.count else {
+            throw AppError.unexpectedError(ERROR_MESSAGE_INVALID_INDEX)
+        }
         let transaction = transactions.value[index]
         selectedTransactions.append(transaction)
     }
     
-    func didDeselectTransaction(index: Int) {
+    func didDeselectTransaction(index: Int) throws {
+        guard index >= 0 && index < transactions.value.count else {
+            throw AppError.unexpectedError(ERROR_MESSAGE_INVALID_INDEX)
+        }
         // check if transaction exists
         // if yes, remove selected transactions
         let transaction = transactions.value[index]
@@ -76,7 +82,7 @@ class TransactionListViewModel {
     }
     
     // MARK: - Utility
-    private func changeViewState() {
+    func changeViewState() {
         switch viewState.value {
         case .view:
             viewState.accept(.edit)
