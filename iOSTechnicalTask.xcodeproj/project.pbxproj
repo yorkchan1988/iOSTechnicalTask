@@ -42,6 +42,7 @@
 		DEE366FA25861A6800AF5BCD /* GetTransactionListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */; };
 		DEE366FE25861A9C00AF5BCD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE366FD25861A9C00AF5BCD /* Constants.swift */; };
 		DEE6E03B258E6DF900A31F33 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE6E03A258E6DF900A31F33 /* AppColor.swift */; };
+		DEE6E0A1258F3A0200A31F33 /* GetTransactionList_invalidJson.json in Resources */ = {isa = PBXBuildFile; fileRef = DEE6E0A0258F3A0200A31F33 /* GetTransactionList_invalidJson.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		DEE366F925861A6800AF5BCD /* GetTransactionListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListApi.swift; sourceTree = "<group>"; };
 		DEE366FD25861A9C00AF5BCD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE6E03A258E6DF900A31F33 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		DEE6E0A0258F3A0200A31F33 /* GetTransactionList_invalidJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetTransactionList_invalidJson.json; sourceTree = "<group>"; };
 		F8F31C8BC076EAF93734F422 /* Pods-iOSTechnicalTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTechnicalTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSTechnicalTaskTests/Pods-iOSTechnicalTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2550343D30D7EE2A21653D /* Pods_iOSTechnicalTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTechnicalTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -184,6 +186,7 @@
 				DEC63C2A258E4C0200B077BD /* singleTransaction.json */,
 				DEC63C2C258E4C0200B077BD /* transactions.json */,
 				DE32F76F2587ACDD008FA04D /* GetTransactionList_emptyResponse.json */,
+				DEE6E0A0258F3A0200A31F33 /* GetTransactionList_invalidJson.json */,
 				DE32F759258676E2008FA04D /* GetTransactionList_missingFields.json */,
 				DE32F73D2586599A008FA04D /* GetTransactionList_success.json */,
 			);
@@ -408,6 +411,7 @@
 				DE32F73E2586599A008FA04D /* GetTransactionList_success.json in Resources */,
 				DE32F75A258676E2008FA04D /* GetTransactionList_missingFields.json in Resources */,
 				DEC63C2E258E4C0200B077BD /* singleTransaction.json in Resources */,
+				DEE6E0A1258F3A0200A31F33 /* GetTransactionList_invalidJson.json in Resources */,
 				DEC63C30258E4C0200B077BD /* transactions.json in Resources */,
 				DEC63C2F258E4C0200B077BD /* nonExistingTransactions.json in Resources */,
 			);

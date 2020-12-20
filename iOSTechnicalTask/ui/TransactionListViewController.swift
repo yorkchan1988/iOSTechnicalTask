@@ -131,12 +131,12 @@ class TransactionListViewController : UIViewController {
     // MARK: - Cosmetic / Text
     private func configureNavigationBar() {
         self.title = "Transactions"
-        self.navigationItem.rightBarButtonItem = getBarButtonItem(withTitle: "Edit", action: #selector(onRightBarButtonPressed))
+        self.navigationItem.rightBarButtonItem = getBarButtonItem(action: #selector(onRightBarButtonPressed))
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-    private func getBarButtonItem(withTitle title: String, action: Selector) -> UIBarButtonItem {
-        let barButtonItem = UIBarButtonItem(title: title, style: .done, target: self, action: action)
+    private func getBarButtonItem(action: Selector) -> UIBarButtonItem {
+        let barButtonItem = UIBarButtonItem(title: nil, style: .done, target: self, action: action)
         setNavigationItemStyle(barButtonItem: barButtonItem)
         return barButtonItem
     }
