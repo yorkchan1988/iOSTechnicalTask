@@ -115,4 +115,28 @@ class GetTransactionListApiTest: XCTestCase {
         
         StubResponse.shared.removeStub(stub: stub)
     }
+    
+    func test_invalidJson() throws {
+        // GIVEN
+        let stub = StubResponse.shared.createStub(
+            host: API_HOST,
+            path: API_PATH_GET_TRANSACTION_LIST,
+            json: "GetTransactionList_invalidJson.json")
+        
+        // WHEN
+        let result = try GetTransactionListApi().requestMappable().toBlocking().first()
+        
+        // THEN
+        XCTAssertNotNil(result)
+        switch result {
+        case .success:
+            XCTFail("No error thrown")
+        case let .failure(networkError):
+            XCTAssertEqual(networkError, NetworkError.parsingError(API_PATH_GET_TRANSACTION_LIST))
+        default:
+            XCTFail("Result was nil")
+        }
+        
+        StubResponse.shared.removeStub(stub: stub)
+    }
 }

@@ -32,7 +32,7 @@ extension Observable where Element == (HTTPURLResponse, String){
             case 200..<300:
                 // is status code is successful we can safely decode to our expected type T
                 guard let object = Mapper<T>().map(JSONString: string) else {
-                    throw NetworkError.parsingError(apiPath)
+                    return .failure(NetworkError.parsingError(apiPath))
                 }
                 
                 return .success(object)
