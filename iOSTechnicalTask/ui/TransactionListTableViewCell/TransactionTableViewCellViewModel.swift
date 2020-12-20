@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class TransactionTableViewCellModel {
+class TransactionTableViewCellViewModel {
     
     let imagePath = BehaviorRelay<String>(value: "")
     let description = BehaviorRelay<String>(value: "")

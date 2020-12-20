@@ -55,8 +55,16 @@ class TransactionListViewModel {
             .disposed(by: disposeBag)
     }
     
-    func handleRightBarButtonPressed() {
-        changeViewState()
+    func changeViewState() {
+        switch viewState.value {
+        case .view:
+            viewState.accept(.edit)
+            rightBarButtonTitle.accept("Done")
+        case .edit:
+            viewState.accept(.view)
+            rightBarButtonTitle.accept("Edit")
+            selectedTransactions = []
+        }
     }
     
     func resetAllSelectedTransactions() {
@@ -86,18 +94,6 @@ class TransactionListViewModel {
         let transaction = transactions.value[index]
         if let idxInSelected = selectedTransactions.firstIndex(where: { $0 == transaction }) {
             selectedTransactions.remove(at: idxInSelected)
-        }
-    }
-    
-    // MARK: - Utility
-    func changeViewState() {
-        switch viewState.value {
-        case .view:
-            viewState.accept(.edit)
-            rightBarButtonTitle.accept("Done")
-        case .edit:
-            viewState.accept(.view)
-            rightBarButtonTitle.accept("Edit")
         }
     }
 }

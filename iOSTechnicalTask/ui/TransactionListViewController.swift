@@ -50,11 +50,11 @@ class TransactionListViewController : UIViewController {
                 
                 switch (viewState) {
                 case TransactionListViewModel.ViewState.edit:
-                    self.showRemoveButton()
+                    self.setRemoveButtonVisibility(isVisible: true)
                     self.setTableViewTransactionEditable(isEditable: true)
                     break;
                 case TransactionListViewModel.ViewState.view:
-                    self.hideRemoveButton()
+                    self.setRemoveButtonVisibility(isVisible: false)
                     self.setTableViewTransactionEditable(isEditable: false)
                     self.resetAllSelectedTransactions()
                     break;
@@ -84,7 +84,7 @@ class TransactionListViewController : UIViewController {
         // cell for row at indexPath
         let datasource = RxTableViewSectionedReloadDataSource<SectionModel<String, Transaction>> { (datasource, tableView, indexPath, transaction) -> UITableViewCell in
 
-            let cellModel = TransactionTableViewCellModel(transaction: transaction)
+            let cellModel = TransactionTableViewCellViewModel(transaction: transaction)
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TransactionTableViewCell.self), for: indexPath) as! TransactionTableViewCell
             cell.viewModel = cellModel
 
@@ -98,14 +98,14 @@ class TransactionListViewController : UIViewController {
                 var sectionModels: [SectionModel<String, Transaction>] = []
                 
                 transactions.forEach { (transaction) in
-                    // if the model name is same as TransactionListViewModel.TRANSACTION_SECTION_HEADER_NAME
-                    // then append transaction into item of the SectionModel
-                    if let index = sectionModels.firstIndex(where: { $0.model == TRANSACTION_SECTION_HEADER_NAME }) {
+                    // if the model of sectionModel is same as the transaction section name,
+                    // then append transaction into items array of the SectionModel
+                    if let index = sectionModels.firstIndex(where: { $0.model == TRANSACTION_SECTION_NAME }) {
                         sectionModels[index].items.append(transaction)
                     }
                     // else create a new SectionModel (which is unexpected)
                     else {
-                        let section = SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [transaction])
+                        let section = SectionModel(model: TRANSACTION_SECTION_NAME, items: [transaction])
                         sectionModels.append(section)
                     }
                 }
@@ -113,7 +113,7 @@ class TransactionListViewController : UIViewController {
                 return sectionModels
             })
             // if error, just return empty array
-            .asDriver(onErrorJustReturn: [SectionModel(model: TRANSACTION_SECTION_HEADER_NAME, items: [])])
+            .asDriver(onErrorJustReturn: [SectionModel(model: TRANSACTION_SECTION_NAME, items: [])])
             .drive(tableViewTransaction.rx.items(dataSource: datasource))
             .disposed(by: disposeBag)
         
@@ -148,7 +148,7 @@ class TransactionListViewController : UIViewController {
     
     // MARK: - User Actions
     @objc private func onRightBarButtonPressed() {
-        viewModel.handleRightBarButtonPressed()
+        viewModel.changeViewState()
     }
     
     @IBAction private func onRemoveButtonPressed() {
@@ -156,23 +156,13 @@ class TransactionListViewController : UIViewController {
     }
     
     // MARK: - View State Change
-    private func showRemoveButton() {
+    private func setRemoveButtonVisibility(isVisible: Bool) {
         UIView.animate(withDuration: 0.3, delay: 0, animations: { [weak self] () in
             guard let self = self else { return }
-            self.viewRemoveContainer.alpha = 1
+            self.viewRemoveContainer.alpha = isVisible ? 1 : 0
         }, completion: { [weak self] finished in
             guard let self = self else { return }
-            self.viewRemoveContainer.isHidden = false
-        })
-    }
-    
-    private func hideRemoveButton() {
-        UIView.animate(withDuration: 0.3, delay: 0, animations: { [weak self] () in
-            guard let self = self else { return }
-            self.viewRemoveContainer.alpha = 0
-        }, completion: { [weak self] finished in
-            guard let self = self else { return }
-            self.viewRemoveContainer.isHidden = true
+            self.viewRemoveContainer.isHidden = !isVisible
         })
     }
     
@@ -183,7 +173,6 @@ class TransactionListViewController : UIViewController {
     
     private func resetAllSelectedTransactions() {
         tableViewTransaction.reloadData()
-        viewModel.resetAllSelectedTransactions()
     }
 }
 

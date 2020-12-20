@@ -20,7 +20,7 @@
 		DE32F74625865EAF008FA04D /* GetTransactionListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F74525865EAF008FA04D /* GetTransactionListResponse.swift */; };
 		DE32F75A258676E2008FA04D /* GetTransactionList_missingFields.json in Resources */ = {isa = PBXBuildFile; fileRef = DE32F759258676E2008FA04D /* GetTransactionList_missingFields.json */; };
 		DE32F7702587ACDD008FA04D /* GetTransactionList_emptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = DE32F76F2587ACDD008FA04D /* GetTransactionList_emptyResponse.json */; };
-		DE32F77E258912BA008FA04D /* TransactionTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F77D258912BA008FA04D /* TransactionTableViewCellModel.swift */; };
+		DE32F77E258912BA008FA04D /* TransactionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F77D258912BA008FA04D /* TransactionTableViewCellViewModel.swift */; };
 		DE32F78A25891509008FA04D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE32F78925891509008FA04D /* Utils.swift */; };
 		DEAD1EE7258279FF00C851D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */; };
 		DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD1EE8258279FF00C851D6 /* SceneDelegate.swift */; };
@@ -71,7 +71,7 @@
 		DE32F74525865EAF008FA04D /* GetTransactionListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransactionListResponse.swift; sourceTree = "<group>"; };
 		DE32F759258676E2008FA04D /* GetTransactionList_missingFields.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetTransactionList_missingFields.json; sourceTree = "<group>"; };
 		DE32F76F2587ACDD008FA04D /* GetTransactionList_emptyResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetTransactionList_emptyResponse.json; sourceTree = "<group>"; };
-		DE32F77D258912BA008FA04D /* TransactionTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCellModel.swift; sourceTree = "<group>"; };
+		DE32F77D258912BA008FA04D /* TransactionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		DE32F78925891509008FA04D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		DEAD1EE3258279FF00C851D6 /* iOSTechnicalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTechnicalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEAD1EE6258279FF00C851D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				DEE366BC2585FDB000AF5BCD /* TransactionTableViewCell.swift */,
-				DE32F77D258912BA008FA04D /* TransactionTableViewCellModel.swift */,
+				DE32F77D258912BA008FA04D /* TransactionTableViewCellViewModel.swift */,
 				DEE366C02585FDD300AF5BCD /* TransactionTableViewCell.xib */,
 			);
 			path = TransactionListTableViewCell;
@@ -510,7 +510,7 @@
 				DEE6E03B258E6DF900A31F33 /* AppColor.swift in Sources */,
 				DE32F74625865EAF008FA04D /* GetTransactionListResponse.swift in Sources */,
 				DEE366BD2585FDB000AF5BCD /* TransactionTableViewCell.swift in Sources */,
-				DE32F77E258912BA008FA04D /* TransactionTableViewCellModel.swift in Sources */,
+				DE32F77E258912BA008FA04D /* TransactionTableViewCellViewModel.swift in Sources */,
 				DEE366FA25861A6800AF5BCD /* GetTransactionListApi.swift in Sources */,
 				DEAD1EE9258279FF00C851D6 /* SceneDelegate.swift in Sources */,
 				DEE366822585F26E00AF5BCD /* TransactionListViewController.swift in Sources */,

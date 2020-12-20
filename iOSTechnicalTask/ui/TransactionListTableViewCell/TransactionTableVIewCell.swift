@@ -20,8 +20,9 @@ class TransactionTableViewCell: UITableViewCell {
     
     private let disposeBag = DisposeBag()
     
-    var viewModel : TransactionTableViewCellModel! {
+    var viewModel : TransactionTableViewCellViewModel! {
         didSet {
+            configureImageView()
             bindViewModel()
         }
     }
@@ -29,28 +30,26 @@ class TransactionTableViewCell: UITableViewCell {
     private func bindViewModel() {
         
         viewModel.imagePath
-            .subscribe( onNext: { [weak self] (imagePath) in
-                guard let self = self else { return }
+            .subscribe( onNext: { [ivIcon] (imagePath) in
                 
-                self.configureImageView()
                 let url = URL(string: imagePath)
-                self.ivIcon.kf.setImage(with: url)
+                ivIcon?.kf.setImage(with: url)
             })
             .disposed(by: disposeBag)
         
         viewModel.description.bind(to: lblTitle.rx.text).disposed(by: disposeBag)
         viewModel.category.bind(to: lblSubTitle.rx.text).disposed(by: disposeBag)
-        Observable.zip(viewModel.amount, viewModel.currency).subscribe { [weak self] (amount, currency) in
-            guard let self = self else { return }
+        
+        // display value in lblPrice only when amount and currency are both ready
+        Observable.zip(viewModel.amount, viewModel.currency).subscribe { [lblPrice] (amount, currency) in
             
-            self.lblPrice.text = String(format: "%@%@", currency, amount)
+            lblPrice?.text = String(format: "%@%@", currency, amount)
         }
         .disposed(by: disposeBag)
 
         viewModel.isSelected.subscribe(
-            onNext: { [weak self] (isSelected) in
-                guard let self = self else { return }
-                self.viewSelectionOverlay.isHidden = !isSelected
+            onNext: { [viewSelectionOverlay] (isSelected) in
+                viewSelectionOverlay?.isHidden = !isSelected
             }
         )
         .disposed(by: disposeBag)
@@ -59,6 +58,6 @@ class TransactionTableViewCell: UITableViewCell {
     private func configureImageView() {
         ivIcon.layer.cornerRadius = ivIcon.bounds.width / 2.0
         ivIcon.layer.borderWidth = 2.0
-        ivIcon.layer.borderColor = AppColor.borderLightGrey().cgColor
+        ivIcon.layer.borderColor = AppColor.borderLightGrey.cgColor
     }
 }
